@@ -1,0 +1,133 @@
+.left-sidebar {
+    @extend %margin-bottom-lg;
+}
+.panel:last-of-type {
+    margin-bottom: 0;
+}
+
+.vertical-slider {
+    border-radius: 4px;
+    overflow: hidden;
+    &__image {
+        width: 100%;
+    }
+}
+
+
+.user-login {
+    position: relative;
+    &__tabs {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        border: none;
+
+
+        a {
+        background-color: transparent !important;
+        border: none !important;
+        color:  $color-gray;
+        padding: 14px 5px 11px !important;
+        }
+
+
+        .active a {
+            color:  $color-light !important;
+
+        }
+    }
+}
+
+.site-news-item {
+    clear: both;
+    position: relative;
+
+    &:not(:last-child){
+        min-height: 85px;
+        margin-bottom: $gap;
+      &::after{
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: calc(100% - 85px);
+        height: 1px;
+        background-color: $color-gray;
+    }
+    }
+
+    &:hover{
+        a {
+            color: $color-accent;
+        }
+        .thumbnail{
+            border-color: $color-accent;
+            background-color: $color-accent;
+        }
+    }
+
+    &__image {
+    float: left;
+    width: 75px;
+    margin: 0 10px 10px 0;
+    }
+    &__title {
+        margin-bottom: 10px;
+        a {
+        transition:color 0.25s;
+        @include block-shortener(1rem,1.5,50px, 2);
+        }
+
+    }
+    &__date {
+        text-align: right;
+        color: darken($color-gray, 30%);
+        font-size: 0.8rem;
+
+    }
+}
+
+.top-films {
+    &__body {
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+    &__list {
+        margin-bottom: 0;
+
+    }
+    &__item {
+        background-color:transparent;
+        color: $color-primary !important;
+        margin-left: -1px;
+        margin-right: -1px;
+        padding-right: 55px;
+
+        &:first-child{
+            border-top: none;
+            border-radius: 0;
+        }
+        &:last-child{
+            border-bottom: none;
+            border-radius: 0;
+        }
+        &:hover,
+        &:focus{
+            background-color: $color-accent !important;
+            color: $color-light !important;
+            border-color: $color-accent !important;
+            .badge {
+                background-color: $color-dark;
+            }
+        }
+
+    }
+    &__badge {
+        position: absolute;
+        right: $gap;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+}

@@ -1,0 +1,89 @@
+.navbar-inverse {
+    background-color: darken($color-dark, 4%);
+    border-color: transparent;
+
+    .navbar-nav {
+      > li > a {
+        transition: background-color 0.5s;
+        
+        @include sm-min {
+           border-radius: 4px;
+        }
+        @include sm {
+            text-align: center;
+        }
+
+        &:hover,
+        &:focus {
+        background-color: $color-primary;
+}
+    }
+    > .active > a {
+    background-color: $color-primary-dark;
+
+    &:focus,
+    &:hover {
+    background-color: $color-primary-light;
+}
+}
+}
+
+}
+
+.navbar-left {
+    @include sm {
+       margin-bottom: 0px; 
+    }
+    li {
+    @include sm-min {
+        margin: 5px 5px 5px 0;
+    }
+
+}
+}
+.navbar-right {
+    @include sm {
+        margin-top: 0px;
+    }
+    li {
+    @include sm-min {
+       margin: 5px 0px 5px 5px;
+        }
+}
+}
+.navbar-toggle {
+    float: none;
+    margin-right: 0;
+}
+.navbar-header {
+    text-align: center;
+}
+
+.panel {
+    border:none;
+    background-color: darken($color-light, 7%);
+    margin-bottom: 30px;
+
+&-info>.panel-heading {
+    border: none;
+    background-color: $color-accent;
+    color: $color-light;
+    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+}
+&-body  {
+    border: 1px solid $color-gray;
+    border-radius: 0 0 4px 4px;
+}
+}
+
+.input {
+    &-lg,
+    &-group-lg > .form-control {
+    font-size: 0.875rem;
+}
+}
+
+.thumbnail {
+    transition: background-color 0.25s;
+}
